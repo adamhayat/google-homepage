@@ -3,6 +3,9 @@ html {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); 
     -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
     font-size: 14px;
+    color: #222;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -41,18 +44,25 @@ nav > * li {
 }
 
 /* make the nav items align properly */
-.material-icons {
+.apps-icon {
     vertical-align: middle;;
     padding: 8px;
+    color: #5f6368;
 }
 
-.material-icons:hover {
+.apps-icon:hover {
     background-color: rgba(60,64,67,0.08);
     border-radius: 50%;
 }
 
 /* make profile pic rounded */
 #avatar {
+    border-radius: 50%;
+    padding: 4px;
+}
+
+#avatar:hover {
+    background-color: rgba(60,64,67,0.08);
     border-radius: 50%;
 }
 
@@ -68,12 +78,156 @@ form {
     margin-top: 2em;
 }
 
+/* Styling the search box input field */
 #search-box {
-    display: block;
     margin: auto;
     width: 38em;
-    height: 3em;
+    height: 3.1em;
     outline: none;
-    border-radius: 20px;
-    border: 2px solid #EFEFEF;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    flex: 1;
+    padding: 1em 3.8em;
+    font-size: 16px;
 } 
+
+/* styling the search box input field when hovered */
+#search-box:hover {
+    box-shadow: 0px 1px 2px 2px rgba(32 33 36 / 10%);
+}
+
+/* styling the area with the search box and icons */
+.search-container {
+    display: inline-flex;
+    flex: 1 1 auto;
+    position: relative;
+    overflow: none;
+}
+
+/* styling both search box icons */
+.search-box-icons {
+    margin: 0 -1.6em 0 -3.6em;
+}
+
+/* search icon */
+#search-icon {
+    z-index: 1;
+    color: #9aa0a6;
+    font-size: 1.6em;
+    margin-top: .7em;
+}
+
+/* voice icon */
+#voice-icon {
+    background: linear-gradient(180deg, hsla(217, 83%, 59%, 1) 28%, hsla(7, 68%, 53%, 1) 50%, hsla(136, 52%, 42%, 1) 83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.2em;
+    margin-top: .34em;
+}
+
+/* Voice tooltip */
+/* Tooltip container */
+#voice-icon {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  #search-voice-icon .tooltiptext {
+    visibility: hidden;
+    width: 106px;
+    height: 26px;
+    background-color: black;
+    text-align: center;
+    padding: 4px 0;
+    margin: 54px -20px;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid #F2F2F2;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  #search-voice-icon:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /* Add top arrow to tooltip */
+  #search-voice-icon .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+
+/* container of search buttons */
+.search-buttons {
+    display: block;
+}
+
+/* both search buttons */
+.button {
+    margin: 2.3em .3em;
+    padding: .7em 1.3em;
+    border: none;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* both search buttons on hover */
+.button:hover {
+    border: 1px solid #dadce0;
+}
+
+/* paragraph styling */
+.paragraph-body {
+    text-align: center;
+}
+
+/* link styling for Francais */
+#francais {
+    color: #1A0DAB
+}
+
+/* entire footer area */
+footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer * {
+    margin: 0;
+    color: rgba(0,0,0,.54);
+}
+
+/* top footer container */
+#footer-top {
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    padding: 16px 30px;
+    border-bottom: 1px solid #dadce0;
+}
+
+/* bottom footer area */
+#footer-menu {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 1 1 auto;
+    padding: .9em;
+}
+

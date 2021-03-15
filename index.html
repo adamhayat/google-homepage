@@ -3,7 +3,6 @@
     <head>
         <link rel="stylesheet" href="styles/sanitize.css">
         <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="fonts/fontawesome-5.15.2-web/">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>Google</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,8 +20,8 @@
                     <ul class="nav">
                         <li><a href="https://mail.google.com/mail/?authuser=0&ogbl" target=blank>Gmail</a></li>
                         <li><a href="https://www.google.ca/imghp?hl=en&authuser=0&ogbl" target=blank>Images</a></li>
-                        <li><a href="https://gsuite.google.com/marketplace/?pann=gam" target=blank><i class="material-icons">&#xe5c3;</i></a></li>
-                        <li><a href="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/" target=blank><img src="images/google-avatar.jpeg" id="avatar" alt="Google Avatar"></a</li>
+                        <li><a href="https://gsuite.google.com/marketplace/?pann=gam" target=blank><i class="material-icons apps-icon">apps</i></a></li>
+                        <li><a href="https://accounts.google.com/SignOutOptions?hl=en&continue=https://www.google.com/" target=blank><img src="images/google-avatar.jpeg" id="avatar" alt="Google Avatar"></a></li>
                     </ul>
                 </div>
             </nav>
@@ -30,11 +29,24 @@
         <main>
             <img src="images/googlelogo_color_272x92dp.png" id="google-logo" alt="Google Logo">
             <form class="search" action="#">
-                <input type="text" placeholder="Search.." name="search" id="search-box" aria-label="search">
-                <input type="submit" value="Google Search" aria-label="Search Button">
-                <input type="button" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky">
+                <div class="search-container">
+                    <i class="material-icons search-box-icons" id="search-icon">
+                        search
+                    </i>
+                <input type="text" name="search" id="search-box" aria-label="search">
+                    <div id="search-voice-icon">
+                    <i class="material-icons search-box-icons" id="voice-icon">
+                        mic
+                    </i>
+                    <span class="tooltiptext">Search by voice</span>
+                    </div>
+                </div>
+                <div id="search-buttons">
+                <input type="submit" class="button" id="search-button" value="Google Search" aria-label="Search Button">
+                <input type="button" class="button" id="lucky-button" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky">
+                </div>
             </form>
-            <p>Google offered in: <a href="https://www.google.com/setprefs?sig=0_6dMveHY244nYf_lwVEtwNODZssw%3D&hl=fr&source=homepage&sa=X&ved=0ahUKEwjWkNP14K7vAhXEHM0KHfUFBwIQ2ZgBCBA">Français</a></p>
+            <p class="paragraph-body">Google offered in: <a href="https://www.google.com/setprefs?sig=0_6dMveHY244nYf_lwVEtwNODZssw%3D&hl=fr&source=homepage&sa=X&ved=0ahUKEwjWkNP14K7vAhXEHM0KHfUFBwIQ2ZgBCBA" id="francais">Français</a></p>
         </main>
         <footer>
             <div id="footer-top">
@@ -43,16 +55,16 @@
             <nav id="footer-menu">
                 <div id="footer-bottom-left">
                     <ul>
-                        <li>Advertising</li>
-                        <li>Business</li>
-                        <li>How Search Works</li>
+                        <li><a href="https://ads.google.com/intl/en_ca/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
+                        <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" target=blank>Business</a></li>
+                        <li><a href="https://google.com/search/howsearchworks/?fg=1" target=blank>How Search Works</a></li>
                     </ul>
                 </div>
                 <div id="footer-bottom-right">
                     <ul>
-                        <li>Privacy</li>
-                        <li>Terms</li>
-                        <li>Settings</li>
+                        <li><a href="https://policies.google.com/privacy?hl=en-CA&fg=1" target=blank>Privacy</a></li>
+                        <li><a href="https://policies.google.com/terms?hl=en-CA&fg=1" target=blank>Terms</a></li>
+                        <li><a href="#">Settings</a></li>
                     </ul>
                 </div>
             </nav>
